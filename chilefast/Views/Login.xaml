@@ -20,7 +20,12 @@
             </StackLayout>
             <StackLayout>
                 <Label Text="Recuperar contraseña" HorizontalOptions="Center"
-                       TextColor="Purple" x:Name="Recuperar_Contra"/>
+                       TextColor="Purple" x:Name="Recuperar_Contra">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="recuperar_pass"
+                                              NumberOfTapsRequired="1"/>
+                    </Label.GestureRecognizers>
+                </Label>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

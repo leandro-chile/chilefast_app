@@ -35,5 +35,9 @@ namespace chilefast.Views
                 Navigation.PopModalAsync();
             }
         }
+        public void recuperar_pass(object sender, EventArgs args)
+        {
+            Device.OpenUri( new Uri("https://www.chilefast.cl/recuperar-pass"));
+        }
     }
 }

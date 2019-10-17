@@ -8,7 +8,7 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Padding="15,15,15,15">
-                <Image Source="logotipo.jpeg"/>
+                <Image Source="logotipo.png"/>
             </StackLayout>
             <StackLayout Margin="6,6,6,6" Padding="6,6,6,6">
                 <Entry Placeholder="Nombre de Usuario" PlaceholderColor="MediumPurple"/>
@@ -18,7 +18,8 @@
                 <DatePicker/>
             </StackLayout>
             <StackLayout>
-                <Button Text="Actualizar información" BackgroundColor="LightPink"/>
+                <Button Text="Actualizar información" BackgroundColor="LightPink"
+                        HorizontalOptions="Center" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
