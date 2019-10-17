@@ -15,6 +15,7 @@ namespace chilefast
             FilePath = filePath;
             InitializeComponent();
             CreaTablas();
+            CreaRegistros();
             MainPage = new MainPage();
         }
 
@@ -36,9 +37,43 @@ namespace chilefast
         {
             using (SQLiteConnection con = new SQLiteConnection(App.FilePath))
             {
+                con.DropTable<ListaEnvios>();
                 con.CreateTable<Usuario>();
                 con.CreateTable<ListaEnvios>();
                 con.CreateTable<ListaFavoritos>();
+            }
+        }
+        protected static void CreaRegistros()
+        {
+            using (SQLiteConnection con = new SQLiteConnection(App.FilePath))
+            {
+                // -34.1685426,-70.7474913,17
+                ListaEnvios le1 = new ListaEnvios()
+                {
+                    id = 1, estado = "En transito", direccion = "cuevas 756, Rancagua",
+                    chofer = "Esteban Duque", lat_destino = "-34.1685426", lon_destino = "-70.7474913,17"
+                };
+                ListaEnvios le2 = new ListaEnvios()
+                {
+                    id = 2,
+                    estado = "Finalizado",
+                    direccion = "San Martin 122, Rancagua",
+                    chofer = "Esteban Duque",
+                    lat_destino = "-34.1685426",
+                    lon_destino = "-70.7474913,17"
+                };
+                ListaEnvios le3 = new ListaEnvios()
+                {
+                    id = 3,
+                    estado = "Sin enviar",
+                    direccion = "Independencia 964, Rancagua",
+                    chofer = "Esteban Duque",
+                    lat_destino = "-34.1685426",
+                    lon_destino = "-70.7474913,17"
+                };
+                con.Insert(le1);
+                con.Insert(le2);
+                con.Insert(le3);
             }
         }
     }

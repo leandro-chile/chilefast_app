@@ -7,11 +7,31 @@
     <ContentPage.Content>
         <ScrollView VerticalScrollBarVisibility="Always">
             <StackLayout>
-                <StackLayout>
-                    <Label Text="Lista de envíos del usuario" TextColor="MediumPurple"
+                <StackLayout Margin="10,10,10,10" Padding="10,10,10,10">
+                    <Image Source="logotipo.png"/>
+                </StackLayout>
+                <StackLayout Padding="4,4,4,4" Margin="6,6,6,6">
+                    <Label Text="Lista de envíos" TextColor="MediumPurple"
+                           FontSize="Large" HorizontalTextAlignment="Center"
                            HorizontalOptions="Center" VerticalOptions="Center"/>
                 </StackLayout>
-                <StackLayout x:Name="ListaEnviosSt"></StackLayout>
+                <StackLayout>
+                    <ListView x:Name="ListaEnviosSt" HasUnevenRows="True">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid>
+                                        <StackLayout Margin="10,10,10,10">
+                                            <Label Text="{Binding direccion}" FontSize="Body" />
+                                            <Label Text="{Binding estado}" FontSize="Small"
+                                                Margin="225,0,0,0" TextColor="Purple"/>
+                                        </StackLayout>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
