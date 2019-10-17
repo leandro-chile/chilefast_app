@@ -20,13 +20,15 @@
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
-                                    <Grid>
-                                        <StackLayout Margin="10,10,10,10">
-                                            <Label Text="{Binding direccion}" FontSize="Body" />
-                                            <Label Text="{Binding estado}" FontSize="Small"
-                                                Margin="225,0,0,0" TextColor="Purple"/>
-                                        </StackLayout>
-                                    </Grid>
+                                    <ViewCell.View>
+                                        <Grid>
+                                            <StackLayout Margin="10,10,10,10">
+                                                <Label Text="{Binding direccion}" FontSize="Body" />
+                                                <Label Text="{Binding estado}" FontSize="Small"
+                                                    Margin="225,0,0,0" TextColor="Purple"/>
+                                            </StackLayout>
+                                        </Grid>
+                                    </ViewCell.View>
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>

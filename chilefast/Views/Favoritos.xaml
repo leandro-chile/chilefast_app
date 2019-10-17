@@ -5,7 +5,45 @@
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <ScrollView VerticalScrollBarVisibility="Always">
-            <StackLayout></StackLayout>
+            <StackLayout>
+                <StackLayout Margin="10,10,10,10" Padding="10,10,10,10">
+                    <Image Source="logotipo.png"/>
+                </StackLayout>
+                <StackLayout Padding="4,4,4,4" Margin="6,6,6,6">
+                    <Label TextColor="MediumPurple" FontSize="Title"
+                           VerticalTextAlignment="Center" Text="Favoritos"
+                           HorizontalTextAlignment="Center"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout Margin="10,10,10,10">
+                    <!--<ImageButton Source="plusicono.png" HorizontalOptions="Center"
+                                 VerticalOptions="CenterAndExpand"
+                                 BackgroundColor="LightPink"/>-->
+                    <Button Text="Ingresar Nuevo  &#xf0fe;" FontFamily="{StaticResource CustomFont}"
+                            BackgroundColor="LightPink" FontSize="Body"
+                            Padding="10,10,10,10" Margin="10,10,10,10"/>
+                </StackLayout>
+                <StackLayout>
+                    <ListView x:Name="ListaEnviosSt" HasUnevenRows="True">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.View>
+                                        <Grid>
+                                            <StackLayout Margin="10,10,10,10">
+                                                <Label Text="{Binding titulo}" FontSize="Body" />
+                                                <Label Text="{Binding direccion}" FontSize="Small"
+                                                    Margin="225,0,0,0" TextColor="Purple"/>
+                                            </StackLayout>
+                                        </Grid>
+                                    </ViewCell.View>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
