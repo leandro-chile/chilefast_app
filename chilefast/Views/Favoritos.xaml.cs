@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Diagnostics;
+using chilefast.Models;
+using chilefast.ViewModels;
+using SQLite;
 using Xamarin.Forms;
 
 namespace chilefast.Views
@@ -10,6 +13,20 @@ namespace chilefast.Views
         public Favoritos()
         {
             InitializeComponent();
+            BindingContext = new FavoritosViewModel();
+        }
+        protected override void OnAppearing()
+        {
+            using (SQLiteConnection con = new SQLiteConnection(App.FilePath))
+            {
+                var favoritos = con.Table<ListaFavoritos>();
+                ListaFavs.HeightRequest = 80 * favoritos.Count();
+                Debug.WriteLine("tamaño: " + favoritos.Count());
+            }
+        }
+        public void NuevoFavorito(object sender, EventArgs args)
+        {
+            Navigation.PushAsync(new NewFav());
         }
     }
 }

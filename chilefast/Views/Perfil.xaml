@@ -18,7 +18,7 @@
                     <Label Text="Fecha de Nacimiento" TextColor="MediumPurple"/>
                     <DatePicker/>
                 </StackLayout>
-                <StackLayout>
+                <StackLayout Margin="15,15,15,15">
                     <Button Text="Actualizar información" BackgroundColor="LightPink"
                             HorizontalOptions="Center" />
                 </StackLayout>

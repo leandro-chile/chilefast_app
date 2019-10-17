@@ -1,5 +1,30 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="chilefast.Views.NewFav">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="chilefast.Views.NewFav"
+             BackgroundColor="White">
     <ContentPage.Content>
+        <ScrollView VerticalScrollBarVisibility="Always">
+            <StackLayout>
+                <StackLayout Padding="15,15,15,15">
+                    <Image Source="logotipo.png"/>
+                </StackLayout>
+                <StackLayout Padding="5,5,5,5" Margin="5,5,5,5">
+                    <Label Text="Añadir nuevo favorito" TextColor="MediumPurple"
+                           HorizontalTextAlignment="Center" FontSize="Title"/>
+                </StackLayout>
+                <StackLayout Margin="6,6,6,6" Padding="6,6,6,6">
+                    <Entry x:Name="_titulo" Placeholder="Titulo" PlaceholderColor="MediumPurple"/>
+                    <Entry x:Name="_region" Placeholder="Region" PlaceholderColor="MediumPurple"/>
+                    <Entry x:Name="_comuna" Placeholder="Comuna" PlaceholderColor="MediumPurple"/>
+                    <Entry x:Name="_ciudad" Placeholder="Ciudad" PlaceholderColor="MediumPurple"/>
+                    <Entry x:Name="_direccion" Placeholder="Dirección" PlaceholderColor="MediumPurple"/>
+                </StackLayout>
+                <StackLayout Margin="15,15,15,15">
+                    <Button Text="Ingresar" BackgroundColor="LightPink"
+                            HorizontalOptions="Center" Clicked="SaveFav"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
