@@ -1,13 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" x:Class="chilefast.MainPage">
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms! Leandro"
-               HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand" />
-    </StackLayout>
-</ContentPage>
+            xmlns:Views1="clr-namespace:chilefast.Views"
+            mc:Ignorable="d" x:Class="chilefast.MainPage"
+            NavigationPage.HasBackButton="False"
+            NavigationPage.HasNavigationBar="False">
+    <NavigationPage Title="Inicio" BackgroundColor="black">
+        <x:Arguments>
+            <Views1:Inicio />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Envios" BackgroundColor="black">
+        <x:Arguments>
+            <Views1:Envios />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Perfil" BackgroundColor="black">
+        <x:Arguments>
+            <Views1:Perfil />
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>

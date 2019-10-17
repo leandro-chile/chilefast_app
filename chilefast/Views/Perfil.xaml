@@ -1,5 +1,25 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="chilefast.Views.Perfil">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="chilefast.Views.Perfil"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="White">
     <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Padding="15,15,15,15">
+                <Image Source="logotipo.jpeg"/>
+            </StackLayout>
+            <StackLayout Margin="6,6,6,6" Padding="6,6,6,6">
+                <Entry Placeholder="Nombre de Usuario" PlaceholderColor="MediumPurple"/>
+                <Entry Placeholder="Correo" PlaceholderColor="MediumPurple"/>
+                <Entry Placeholder="Dirección" PlaceholderColor="MediumPurple"/>
+                <Label Text="Fecha de Nacimiento" TextColor="MediumPurple"/>
+                <DatePicker/>
+            </StackLayout>
+            <StackLayout>
+                <Button Text="Actualizar información" BackgroundColor="LightPink"/>
+            </StackLayout>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

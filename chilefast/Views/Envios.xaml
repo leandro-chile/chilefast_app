@@ -1,5 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="chilefast.Views.Envios">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="chilefast.Views.Envios" BackgroundColor="White"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="Lista de envíos del usuario" TextColor="MediumPurple"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+            </StackLayout>
+            <StackLayout x:Name="ListaEnviosSt"></StackLayout>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

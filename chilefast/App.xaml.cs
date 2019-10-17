@@ -6,10 +6,11 @@ namespace chilefast
 {
     public partial class App : Application
     {
-        public App()
+        public static string FilePath;
+        public static bool loggedIn = false;
+        public App(string filePath)
         {
             InitializeComponent();
-
             MainPage = new MainPage();
         }
 
