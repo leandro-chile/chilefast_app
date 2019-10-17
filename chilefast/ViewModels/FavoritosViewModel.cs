@@ -10,6 +10,7 @@ namespace chilefast.ViewModels
     public class FavoritosViewModel
     {
         public List<ListaFavoritos> listaFavoritos { get; set; }
+        public int tamano { get; set; }
         private ObservableCollection<ListaFavoritos> items;
         public ObservableCollection<ListaFavoritos> Items
         {
@@ -25,10 +26,11 @@ namespace chilefast.ViewModels
             using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
             {
                 var listafavs = conn.Table<ListaFavoritos>();
+                tamano = 80 * listafavs.Count();
                 foreach (ListaFavoritos item in listafavs)
                 {
                     Items.Add(item);
-                    Debug.WriteLine(item.titulo);
+                    Debug.WriteLine(item.titulo + " tamano: " + tamano);
                 }
             }
         }

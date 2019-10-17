@@ -16,7 +16,8 @@
                            HorizontalOptions="Center" VerticalOptions="Center"/>
                 </StackLayout>
                 <StackLayout>
-                    <ListView x:Name="ListaEnviosSt" HasUnevenRows="True">
+                    <ListView x:Name="ListaEnviosSt" HasUnevenRows="True"
+                              HeightRequest="240">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>

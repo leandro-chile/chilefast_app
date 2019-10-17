@@ -7,7 +7,7 @@
         <ScrollView VerticalScrollBarVisibility="Always">
             <StackLayout>
                 <StackLayout Padding="15,15,15,15">
-                    <Image Source="logotipo.png"/>
+                    <!--<Image Source="logotipo.png"/>-->
                 </StackLayout>
                 <StackLayout Padding="5,5,5,5" Margin="5,5,5,5">
                     <Label Text="Añadir nuevo favorito" TextColor="MediumPurple"

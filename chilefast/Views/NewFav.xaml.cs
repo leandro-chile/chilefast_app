@@ -16,6 +16,11 @@ namespace chilefast.Views
         }
         public void SaveFav(object sender, EventArgs args)
         {
+            if(String.IsNullOrEmpty(_titulo.Text) && String.IsNullOrEmpty(_direccion.Text))
+            {
+                DisplayAlert("Alerta", "Debe ingresar un titulo y una dirección", "Aceptar");
+                return;
+            }
             string tituloV = _titulo.Text;
             string regionV = _region.Text;
             string comunaV = _comuna.Text;

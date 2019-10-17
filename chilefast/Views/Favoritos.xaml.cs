@@ -17,12 +17,13 @@ namespace chilefast.Views
         }
         protected override void OnAppearing()
         {
-            using (SQLiteConnection con = new SQLiteConnection(App.FilePath))
-            {
-                var favoritos = con.Table<ListaFavoritos>();
-                ListaFavs.HeightRequest = 80 * favoritos.Count();
-                Debug.WriteLine("tamaño: " + favoritos.Count());
-            }
+            BindingContext = new FavoritosViewModel();
+            //using (SQLiteConnection con = new SQLiteConnection(App.FilePath))
+            //{
+            //    var favoritos = con.Table<ListaFavoritos>();
+            //    ListaFavs.HeightRequest = 80 * favoritos.Count();
+            //    Debug.WriteLine("tamaño: " + favoritos.Count());
+            //}
         }
         public void NuevoFavorito(object sender, EventArgs args)
         {

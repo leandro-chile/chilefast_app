@@ -38,6 +38,7 @@ namespace chilefast
             using (SQLiteConnection con = new SQLiteConnection(App.FilePath))
             {
                 con.DropTable<ListaEnvios>();
+                //con.DropTable<ListaFavoritos>();
                 con.CreateTable<Usuario>();
                 con.CreateTable<ListaEnvios>();
                 con.CreateTable<ListaFavoritos>();

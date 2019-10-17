@@ -24,15 +24,15 @@
                             BackgroundColor="LightPink" FontSize="Body" Clicked="NuevoFavorito"
                             Padding="10,10,10,10" Margin="10,10,10,10"/>
                 </StackLayout>
-                <StackLayout>
+                <StackLayout Margin="12,12,12,12">
                     <ListView x:Name="ListaFavs" HasUnevenRows="True" ItemsSource="{Binding Items}"
-                              HeightRequest="120">
+                              HeightRequest="{Binding tamano}">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
                                     <ViewCell.View>
                                         <Grid>
-                                            <StackLayout Margin="10,10,10,10">
+                                            <StackLayout Margin="5,5,5,5">
                                                 <Label Text="{Binding titulo}" FontSize="Body" />
                                                 <Label Text="{Binding dirección}" FontSize="Small"
                                                     Margin="225,0,0,0" TextColor="Purple"/>
