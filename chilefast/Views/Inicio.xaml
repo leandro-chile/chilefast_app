@@ -4,10 +4,29 @@
              x:Class="chilefast.Views.Inicio" BackgroundColor="White"
              NavigationPage.HasBackButton="False" NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Gracias por preferir nuestro servicio"
-                   TextColor="MediumPurple"
-                   VerticalOptions="Center" HorizontalOptions="Center"/>
-        </StackLayout>
+        <ScrollView VerticalScrollBarVisibility="Always">
+            <StackLayout>
+                <StackLayout Margin="10,10,10,10" Padding="10,10,10,10">
+                    <Image Source="logotipo.png"/>
+                </StackLayout>
+                <StackLayout Margin="10,10,10,10" Padding="10,10,10,10">
+                    <Label Text="Gracias por preferir nuestro servicio"
+                           TextColor="MediumPurple" FontSize="Title"
+                           VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                           VerticalOptions="Center" HorizontalOptions="Center"/>
+                </StackLayout>
+                <!--<CarouselView>
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Margin="10,10,10,10" Padding="10,10,10,10"
+                                         BackgroundColor="MediumPurple">
+                                <Image Source="serviciospaqueteria.png" Aspect="AspectFit"/>
+                                <Image Source="servicios.png" Aspect="AspectFit"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>-->
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

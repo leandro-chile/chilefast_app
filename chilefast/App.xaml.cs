@@ -1,4 +1,6 @@
 ﻿using System;
+using chilefast.Models;
+using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +12,9 @@ namespace chilefast
         public static bool loggedIn = false;
         public App(string filePath)
         {
+            FilePath = filePath;
             InitializeComponent();
+            CreaTablas();
             MainPage = new MainPage();
         }
 
@@ -27,6 +31,15 @@ namespace chilefast
         protected override void OnResume()
         {
             // Handle when your app resumes
+        }
+        protected static void CreaTablas()
+        {
+            using (SQLiteConnection con = new SQLiteConnection(App.FilePath))
+            {
+                con.CreateTable<Usuario>();
+                con.CreateTable<ListaEnvios>();
+                con.CreateTable<ListaFavoritos>();
+            }
         }
     }
 }

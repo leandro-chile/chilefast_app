@@ -5,12 +5,14 @@
              NavigationPage.HasBackButton="False"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout>
+        <ScrollView VerticalScrollBarVisibility="Always">
             <StackLayout>
-                <Label Text="Lista de envíos del usuario" TextColor="MediumPurple"
-                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                <StackLayout>
+                    <Label Text="Lista de envíos del usuario" TextColor="MediumPurple"
+                           HorizontalOptions="Center" VerticalOptions="Center"/>
+                </StackLayout>
+                <StackLayout x:Name="ListaEnviosSt"></StackLayout>
             </StackLayout>
-            <StackLayout x:Name="ListaEnviosSt"></StackLayout>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

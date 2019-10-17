@@ -6,21 +6,23 @@
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="White">
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout Padding="15,15,15,15">
-                <Image Source="logotipo.png"/>
-            </StackLayout>
-            <StackLayout Margin="6,6,6,6" Padding="6,6,6,6">
-                <Entry Placeholder="Nombre de Usuario" PlaceholderColor="MediumPurple"/>
-                <Entry Placeholder="Correo" PlaceholderColor="MediumPurple"/>
-                <Entry Placeholder="Dirección" PlaceholderColor="MediumPurple"/>
-                <Label Text="Fecha de Nacimiento" TextColor="MediumPurple"/>
-                <DatePicker/>
-            </StackLayout>
+        <ScrollView VerticalScrollBarVisibility="Always">
             <StackLayout>
-                <Button Text="Actualizar información" BackgroundColor="LightPink"
-                        HorizontalOptions="Center" />
+                <StackLayout Padding="15,15,15,15">
+                    <Image Source="logotipo.png"/>
+                </StackLayout>
+                <StackLayout Margin="6,6,6,6" Padding="6,6,6,6">
+                    <Entry Placeholder="Nombre de Usuario" PlaceholderColor="MediumPurple"/>
+                    <Entry Placeholder="Correo" PlaceholderColor="MediumPurple"/>
+                    <Entry Placeholder="Dirección" PlaceholderColor="MediumPurple"/>
+                    <Label Text="Fecha de Nacimiento" TextColor="MediumPurple"/>
+                    <DatePicker/>
+                </StackLayout>
+                <StackLayout>
+                    <Button Text="Actualizar información" BackgroundColor="LightPink"
+                            HorizontalOptions="Center" />
+                </StackLayout>
             </StackLayout>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

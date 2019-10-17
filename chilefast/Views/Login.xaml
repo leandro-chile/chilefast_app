@@ -3,30 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="chilefast.Views.Login" BackgroundColor="White">
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout Margin="5,5,5,5">
-                <Image Source="logotipo.jpeg"/>
-            </StackLayout>
-            <StackLayout Margin="10,10,10,10" Padding="5,5,5,5">
-                <Entry Placeholder="Correo" PlaceholderColor="MediumPurple" x:Name="Correo"/>
-                <Label TextColor="Red" FontSize="Small" Text="Debe Ingresar su correo"
-                       IsVisible="False" x:Name="v_correo"/>
-                <Entry Placeholder="Contraseña" IsPassword="True" x:Name="Password"
-                       PlaceholderColor="MediumPurple"/>
-                <Label TextColor="Red" FontSize="Small" Text="Debe Ingresar su contraseña"
-                       IsVisible="False" x:Name="v_pass"/>
-                <Button x:Name="logueo" Text="Ingresar" Clicked="login"
-                        BackgroundColor="LightPink" CornerRadius="10"/>
-            </StackLayout>
+        <ScrollView VerticalScrollBarVisibility="Always">
             <StackLayout>
-                <Label Text="Recuperar contraseña" HorizontalOptions="Center"
-                       TextColor="Purple" x:Name="Recuperar_Contra">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="recuperar_pass"
-                                              NumberOfTapsRequired="1"/>
-                    </Label.GestureRecognizers>
-                </Label>
+                <StackLayout Margin="5,5,5,5">
+                    <Image Source="logotipo.jpeg"/>
+                </StackLayout>
+                <StackLayout Margin="10,10,10,10" Padding="5,5,5,5">
+                    <Entry Placeholder="Correo" PlaceholderColor="MediumPurple" x:Name="Correo"/>
+                    <Label TextColor="Red" FontSize="Small" Text="Debe Ingresar su correo"
+                           IsVisible="False" x:Name="v_correo"/>
+                    <Entry Placeholder="Contraseña" IsPassword="True" x:Name="Password"
+                           PlaceholderColor="MediumPurple"/>
+                    <Label TextColor="Red" FontSize="Small" Text="Debe Ingresar su contraseña"
+                           IsVisible="False" x:Name="v_pass"/>
+                    <Button x:Name="logueo" Text="Ingresar" Clicked="login"
+                            BackgroundColor="LightPink" CornerRadius="10"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Recuperar contraseña" HorizontalOptions="Center"
+                           TextColor="Purple" x:Name="Recuperar_Contra">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="recuperar_pass"
+                                                  NumberOfTapsRequired="1"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
             </StackLayout>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

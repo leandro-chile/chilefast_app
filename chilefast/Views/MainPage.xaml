@@ -7,17 +7,26 @@
             mc:Ignorable="d" x:Class="chilefast.MainPage"
             NavigationPage.HasBackButton="False"
             NavigationPage.HasNavigationBar="False">
-    <NavigationPage Title="Inicio" BackgroundColor="black">
+    <NavigationPage Title="Inicio" BackgroundColor="black"
+                    IconImageSource="homeicono.png">
         <x:Arguments>
             <Views1:Inicio />
         </x:Arguments>
     </NavigationPage>
-    <NavigationPage Title="Envios" BackgroundColor="black">
+    <NavigationPage Title="Envios" BackgroundColor="black"
+                    IconImageSource="camionicono.png">
         <x:Arguments>
             <Views1:Envios />
         </x:Arguments>
     </NavigationPage>
-    <NavigationPage Title="Perfil" BackgroundColor="black">
+    <NavigationPage Title="Favoritos" BackgroundColor="black"
+                    IconImageSource="staricono.png">
+        <x:Arguments>
+            <Views1:Favoritos />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Perfil" BackgroundColor="black"
+                    IconImageSource="perfilicono.png">
         <x:Arguments>
             <Views1:Perfil />
         </x:Arguments>
